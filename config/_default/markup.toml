@@ -1,0 +1,28 @@
+# -- Markup --
+# These settings are required for the theme to function.
+# -- 标记配置 --
+# 这些设置是主题正常运行所必需的。
+
+[goldmark]
+  [goldmark.parser]
+    wrapStandAloneImageWithinParagraph = false
+
+    [goldmark.parser.attribute]
+      block = true
+
+  [goldmark.renderer]
+    unsafe = true
+
+  [goldmark.extensions]
+    [goldmark.extensions.passthrough]
+      enable = true
+      [goldmark.extensions.passthrough.delimiters]
+        block = [['\[', '\]'], ['$$', '$$']]
+        inline = [['\(', '\)']]
+
+[highlight]
+  noClasses = false
+
+[tableOfContents] # 控制文章目录从第一标题开始显示，可以识别到第四标题
+  startLevel = 1
+  endLevel = 4
