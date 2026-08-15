@@ -23,102 +23,52 @@
 
 
 
-[[main]]  # main菜单：显示在网站顶部的页眉处。通常用来放最重要的页面，比如“首页”、“博客”、“关于”等。
-    name = "首页" # name指的是菜单上显示给你的访客看的文字
-    pageRef = "/"
-    weight = 1 # weight数值越小，菜单越靠左（排在前面）
-
+[[main]]
+name = "首页"
+pageRef = "/"
+weight = 1
 
 [[main]]
-    name = "专题"
-    weight = 2
-
-    [[main]]
-    name = "科学上网"
-    parent = "专题" # parent指的是链接到父层级“类别”
-    pageRef = "science-networking"
-    weight = 19
-  
-    [[main]]
-    name = "软件推荐"
-    parent = "专题" 
-    pageRef = "software"
-    weight = 20
+name = "专题"
+weight = 2
 
 [[main]]
-    name = "折腾记录"
-    weight = 3
-    pageRef = "record"
-
-
-[[main]]
-    name = "种类"
-    weight = 4
-    pageRef = "article"
+name = "科学上网"
+parent = "专题"
+pageRef = "science-networking"
+weight = 19
 
 [[main]]
-    name = "文章"
-    weight = 3
-    pageRef = "article"
-
-
-
-# 只显示图标
-[[main]]
-    identifier = "GitHub"  # identifier用来防止name重名，识别不到
-    name = " "
-    pre = "github" # pre在菜单文字前面加一个小图标，图标名称来自Blowfish自带的图标库。显示GitHub的小标志。
-    url = "https://github.com/laotouzzz/laotouzzz.github.io"
-    weight = 40
+name = "软件推荐"
+parent = "专题"
+pageRef = "software"
+weight = 20
 
 [[main]]
-    identifier = "douyin" 
-    name = " "
-    pre = "tiktok"
-    weight = 40
+name = "折腾记录"
+pre = "ghost"
+pageRef = "record"
+weight = 3
 
+[[main]]
+name = "种类"
+pageRef = "article"
+weight = 4
 
+[[main]]
+name = "文章"
+pageRef = "article"
+weight = 3
 
-#[[main]]
-#  name = "Categories"
-#  pageRef = "categories"
-#  weight = 20
+[[main]]
+identifier = "GitHub"
+name = " "
+pre = "github"
+url = "https://github.com/laotouzzz/laotouzzz.github.io"
+weight = 40
 
-#[[main]]
-#  name = "Tags"
-#  pageRef = "tags"
-#  weight = 30
-
-#[[subnavigation]] # 子导航,将在主菜单下面展示第二行 配置方式和main一样
-#    name = "An interesting topic"
-#    pageRef = "tags/interesting-topic"
-#    weight = 10
-
-#[[subnavigation]]
-#  name = "My Awesome Category"
-#  pre = "github"
-#  pageRef = "categories/awesome"
-#  weight = 20
-
-
-# -- Footer Menu --
-# The footer menu is displayed at the bottom of the page, just before
-# the copyright notice. Configure as per the main menu above.
-
-# -- 页脚菜单 --
-# 页脚菜单显示在页面底部，版权声明的正上方。
-# 其配置方式与上方的主菜单相同。
-
-# footer菜单（页脚菜单）：显示在网站底部，版权信息的上方。通常用来放一些次要链接，比如“隐私政策”、“使用条款”等。
-
-# [[footer]]
-#   name = "Tags"
-#   pageRef = "tags"
-#   weight = 10
-
-# [[footer]]
-#   name = "Categories"
-#   pageRef = "categories"
-#   weight = 20
-
-
+[[main]]
+identifier = "douyin"
+name = " "
+pre = "tiktok"
+weight = 40

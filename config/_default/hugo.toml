@@ -2,6 +2,10 @@
 # Refer to the theme docs for more details about each of these parameters.
 # https://blowfish.page/docs/getting-started/
 
+# -- 站点配置 --
+# 有关每个参数的更多详细信息，请参阅主题文档。
+# https://blowfish.page/docs/getting-started/
+
 theme = "blowfish" # UNCOMMENT THIS LINE
 baseURL = "https://laotouzzz.cc.cd/"
 defaultContentLanguage = "en"

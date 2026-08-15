@@ -5,42 +5,79 @@
 # Refer to the theme docs for more details about each of these parameters.
 # https://blowfish.page/docs/configuration/#theme-parameters
 
+# ============================================================
+# 常用修改位置：
+# - 首页背景和布局：搜索 [homepage]
+# - 文章页外观：搜索 [article]
+# - 文章列表外观：搜索 [list]
+# ============================================================
+
+
+# --- 全站外观 ------------------------------------------------
+
+# 配色方案。blowfish 是默认蓝色，简洁耐看。
+# 其他可选：avocado、fire、ocean、forest、noir、slate、github 等。
 colorScheme = "blowfish"
-defaultAppearance = "light" # valid options: light or dark
-autoSwitchAppearance = true
+defaultAppearance = "light" # 默认明暗模式：light 浅色；dark 深色。
+autoSwitchAppearance = true # 是否跟随访问者的系统自动切换明暗模式。
 
-enableA11y = false
-enableSearch = true
-enableCodeCopy = false
-enableStructuredBreadcrumbs = false
-# enableStyledScrollbar = true # disable to use native scrollbar style (defaults to true)
+# --- 全站功能 ------------------------------------------------
 
-replyByEmail = false
+enableA11y = false # 无障碍辅助按钮。追求简洁可保持关闭。
+enableSearch = true # 站内搜索。开启时 hugo.toml 的 outputs.home 必须包含 JSON。
 
+# 代码块右上角的“复制代码”按钮。
+# 开启时还要保证 markup.toml 中 highlight.noClasses = false。
+enableCodeCopy = true
+
+enableStructuredBreadcrumbs = false # 搜索引擎使用的结构化面包屑数据。
+# enableStyledScrollbar = true # Blowfish风格滚动条。true：禁用原生滚动条，false：开启原生滚动条
+
+replyByEmail = true # 文章末尾的邮件回复入口；需要配置作者邮箱。
+
+# 首页最近文章来自哪些 content 子目录。
+# 例如文章在 content/article/，可以取消下面的注释：
 # mainSections = ["section1", "section2"]
-# robots = ""
+# robots = "" # robots 元数据，通常无需设置。
 
-disableImageOptimization = false
-disableImageOptimizationMD = false
-disableTextInHeader = false
-# backgroundImageWidth = 1200
 
-# defaultBackgroundImage = "IMAGE.jpg" # used as default for background images
-# defaultFeaturedImage = "IMAGE.jpg" # used as default for featured images in all articles
-# defaultSocialImage = "/android-chrome-512x512.png" # used as default for social media sharing (Open Graph and Twitter)
-hotlinkFeatureImage = false
-# Thumbnail aspect ratio as a number (e.g., "1.5", "1.0", "1.777")
-# thumbnailAspectRatio = "1.5"
-# imagePosition = "50% 50%"
+# --- 图片处理 ------------------------------------------------
 
-highlightCurrentMenuArea = true
-smartTOC = true # 开启智能目录。具体问豆包
-smartTOCHideUnfocusedChildren = false # 在智能目录下，隐藏非焦点的子目录项。具体问豆包
+disableImageOptimization = false # false 表示保留 Hugo 的图片压缩、缩放和优化。
+disableImageOptimizationMD = false # 是否只关闭 Markdown 图片 ![](路径) 的优化。
+disableTextInHeader = false # true 时页眉只显示 Logo，不显示文字。
+# backgroundImageWidth = 1200 # 背景图片处理后的宽度，通常保持默认。
 
+# background 首页和 background Hero 使用的全站默认背景。
+# 图片应位于 assets/img/background.svg。
+# 如果把首页 layout 改成 background，建议取消下面的注释。
+defaultBackgroundImage = "img/background.svg" 
+
+# defaultFeaturedImage = "img/background.svg" # 所有没有单独封面的文章使用的默认封面。
+
+# defaultSocialImage = "/android-chrome-512x512.png" # 分享到社交平台时使用的默认图片。
+hotlinkFeatureImage = false # 是否直接热链接外部封面。使用本地图片时保持 false。
+
+# 缩略图比例：1.5 约为 3:2，1.777 约为 16:9。
+# thumbnailAspectRatio = "1.5" 
+# imagePosition = "50% 50%" # 图片主体位置：50% 50% 居中；50% 30% 会偏上
+
+
+# --- 菜单与文章目录 ------------------------------------------
+
+highlightCurrentMenuArea = true # 访问某个栏目时，高亮对应的顶部菜单。
+smartTOC = true # 智能目录：阅读到哪个标题，就高亮哪个目录项。
+smartTOCHideUnfocusedChildren = false # 是否隐藏当前阅读区域以外的深层目录。false 会保留完整目录。
+
+# 静态资源指纹算法，用于避免浏览器缓存旧 CSS/JS。
 fingerprintAlgorithm = "sha512" # Valid values are "sha512" (default), "sha384", "sha256"
 
+# Gitea / Forgejo 短代码的默认服务器；不用短代码时没有影响。
 giteaDefaultServer = "https://git.fsfe.org"
 forgejoDefaultServer = "https://v11.next.forgejo.org"
+
+
+# --- 多语言自动跳转 ------------------------------------------
 
 [languageRedirect]
   enabled = false # Enable client-side language redirects for multilingual sites.
@@ -62,28 +99,57 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   showAppearanceSwitcher = true
   showScrollToTop = true
 
-[homepage]
-  layout = "profile" # valid options: page, profile, hero, card, background, custom
-  #homepageImage = "IMAGE.jpg" # used in: hero, and card
-  showRecent = false
-  showRecentItems = 5
-  showMoreLink = false
+# --- 首页外观：最常修改的部分 -------------------------------
+
+[homepage] # 首页布局管理
+  # 六种首页布局：
+  # page       普通 Markdown 首页
+  # profile    头像、简介、社交链接首页
+  # hero       大图视觉首页
+  # card       图片卡片首页
+  # background 整页背景首页
+  # custom     自定义模板，需要自己写 custom.html
+  layout = "background"
+
+  # 首页主图。必须存在：assets/img/background.svg
+  homepageImage = "img/background.svg"  # 只有hero，card，background布局方式才能正常显示图片：
+
+  showRecent = false # 是否在首页展示最近写的文章
+  showRecentItems = 4  # 最近文章展示的数量
+  showMoreLink = false  # 最近文章末尾是否显示“查看更多”。
+
+  # “查看更多”跳转地址。
+  # 如果文章目录是 content/article/，建议改为 "/article/"。
   showMoreLinkDest = "/posts/"
-  cardView = false
-  cardViewScreenWidth = false
-  layoutBackgroundBlur = false # only used when layout equals background
-  disableHeroImageFilter = false # only used when layout equals hero
+
+  cardView = false  # 最近文章是否使用图片卡片。false 更简洁。
+  cardViewScreenWidth = false # 卡片是否扩展到屏幕宽度，仅在 cardView = true 时生效。
+
+  # background为首页布局时，滚动时是否模糊背景；
+  layoutBackgroundBlur = false # 仅在布局（layout）设置为 background 时生效
+
+  # hero为首页布局时，是否关闭图片滤镜。
+  # false 保留滤镜，文字更清楚；true 更接近图片原色。
+  disableHeroImageFilter = false # 仅在布局（layout）设置为 hero 时生效
+
+# --- 单篇文章页面 --------------------------------------------
 
 [article]
+  # 日期、更新时间和作者信息。
   showDate = true
-  showViews = false
-  showLikes = false
+
+  showViews = false   # 阅读量需要 Firebase，未配置时保持关闭。
+  showLikes = false   # 点赞量需要 Firebase，未配置时保持关闭。
   showDateOnlyInArticle = false
   showDateUpdated = true
   showAuthor = true
   # showAuthorBottom = false
-  showHero = false
-  # heroStyle = "basic" # valid options: basic, big, background, thumbAndBackground
+
+  showHero = true   # 文章顶部封面 Hero。当前关闭，页面更简洁。
+  # 开启showHero后可选：basic（基础班）、big（宽大版）、background（全屏背景）、thumbAndBackground（缩略图+背景）。
+  heroStyle = "thumbAndBackground"
+
+
   layoutBackgroundBlur = true # only used when heroStyle equals background or thumbAndBackground
   layoutBackgroundHeaderSpace = true # only used when heroStyle equals background
   showBreadcrumbs = false
@@ -109,9 +175,15 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   showZenMode = false
   # externalLinkForceNewTab = false # disable to allow external links in the same tab (defaults to true)
 
+# --- 文章列表页，例如 /article/ ------------------------------
+
 [list]
-  showHero = false
-  # heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
+
+  # 列表页不使用 Hero 和卡片，保持普通简洁样式。
+  showHero = true # 文章列表页封面
+  # 开启showHero后可选：basic（基础班）、big（宽大版）、background（全屏背景）、thumbAndBackground（缩略图+背景）。
+  heroStyle = "background"
+
   layoutBackgroundBlur = true # only used when heroStyle equals background or thumbAndBackground
   layoutBackgroundHeaderSpace = true # only used when heroStyle equals background
   showBreadcrumbs = false
@@ -120,8 +192,10 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   showLikes = false
   showTableOfContents = false
   showCards = false
-  orderByWeight = false
-  groupByYear = true
+  
+  # 排序和显示形式。
+  orderByWeight = true # 是否已weight方式进行排序，需要在md添加属性weight
+  groupByYear = false # 文章列表是否已年分组
   cardView = false
   cardViewScreenWidth = false
   constrainItemsWidth = false
@@ -153,6 +227,9 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   groupByYear = false
   cardView = false
   cardViewScreenWidth = false
+
+# --- 第三方服务：默认全部关闭 -------------------------------
+# 只有真正使用某项服务时，才取消注释并填写真实参数。
 
 [firebase]
   # apiKey = "XXXXXX"
