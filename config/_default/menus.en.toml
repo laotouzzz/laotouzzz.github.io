@@ -30,24 +30,32 @@
 
 
 [[main]]
-    name = "主题"
+    name = "专题"
     weight = 2
 [[main]]
     name = "科学上网"
-    parent = "主题" # parent指的是链接到父层级“类别”
+    parent = "专题" # parent指的是链接到父层级“类别”
     pageRef = "science-networking"
     weight = 19
 [[main]]
-    name = "主题二"
-    parent = "主题" 
-    pageRef = "science-networking"
+    name = "软件推荐"
+    parent = "专题" 
+    pageRef = "software"
     weight = 20
 
 [[main]]
     name = "种类"
-    weight = 2
-    pageRef = "1"
+    weight = 4
+    pageRef = "article"
 
+[[main]]
+    name = "文章"
+    weight = 3
+    pageRef = "article"
+
+
+
+# 只显示图标
 [[main]]
     identifier = "GitHub"  # identifier用来防止name重名，识别不到
     name = " "

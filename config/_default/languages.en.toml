@@ -8,11 +8,11 @@ title = "LAOTOU的个人主页"
   displayName = "en"
   isoCode = "en"
   rtl = false
-  dateFormat = "2006-01-02"
+  dateFormat = "2006-01-02" # 日期的格式，2006-01-02的格式只能这样写
   logo = "img/logo.png"
   secondaryLogo = "img/secondary-logo.png"
   description = "My awesome website"
-#  copyright = "Copy, _right?_ :thinking_face:"
+  #copyright = "Copy, _right?_ :thinking_face:"
 
 [params.author]
   name = "LAOTOU"
@@ -49,7 +49,7 @@ title = "LAOTOU的个人主页"
 #     { mastodon = "https://mastodon.instance/@username" },
 #     { matrix = "https://matrix.to/#/URI" },
 #     { medium = "https://medium.com/username" },
-#     { microsoft = "https://www.microsoft.com/" },
+    { microsoft = "https://www.microsoft.com/" },
 #     { orcid = "https://orcid.org/userid" },
 #     { patreon = "https://www.patreon.com/username" },
 #     { pinterest = "https://pinterest.com/username" },
