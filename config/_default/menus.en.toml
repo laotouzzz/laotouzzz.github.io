@@ -32,16 +32,25 @@
 [[main]]
     name = "专题"
     weight = 2
-[[main]]
+
+    [[main]]
     name = "科学上网"
     parent = "专题" # parent指的是链接到父层级“类别”
     pageRef = "science-networking"
     weight = 19
-[[main]]
+  
+    [[main]]
     name = "软件推荐"
     parent = "专题" 
     pageRef = "software"
     weight = 20
+
+[[main]]
+    name = "折腾记录"
+    weight = 3
+    [[main]]
+    name = "个人博客搭建记录"
+    parent = "折腾记录" 
 
 [[main]]
     name = "种类"
