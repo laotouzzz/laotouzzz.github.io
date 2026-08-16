@@ -5,24 +5,25 @@ weight = 1
 title = "LAOTOU的个人博客"
 
 [params]
-  displayName = "en"
-  isoCode = "en"
-  rtl = false
+  displayName = "en" # 界面显示语言名称
+  isoCode = "en" # 语言 ISO 代码
+  rtl = false # 是否从右向左排版（阿拉伯等语言使用），中文保持 false。
   dateFormat = "2006-01-02" # 日期的格式，2006-01-02的格式只能这样写
-  logo = "img/logo.png"
-  secondaryLogo = "img/secondary-logo.png"
-  description = "My awesome website"
-  #copyright = "Copy, _right?_ :thinking_face:"
+  logo = "img/laotou-logo.png" # 网站主 logo、暗色模式下的 logo
+  secondaryLogo = "img/laotou-logo.png"
+  description = "My awesome website" # 网站首页 meta 描述，搜索引擎会抓取，改成你自己站点简介
+  #copyright = "Copy, _right?_ :thinking_face:" # 底部版权信息，取消注释自定义版权文案
 
 [params.author]
   name = "LAOTOU"
   email = "laotouzzz@qq.com"
-  image = "img/blowfish_logo.png"
-  imageQuality = 96
+  image = "img/laotou-logo.png" # 头像设置
+  imageQuality = 100 # 图片质量
   headline = "互联网小学生"
+  bio = "哈哈哈哈哈" # 个人简介
   links = [
       {email = "mailto:laotouzzz@qq.com"},
       {github = "https://github.com/laotouzzz"},
       {microsoft = "https://www.microsoft.com/"},
   ]
-bio = "哈哈哈哈哈"
+

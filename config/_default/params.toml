@@ -33,7 +33,7 @@ enableCodeCopy = true
 enableStructuredBreadcrumbs = false # 搜索引擎使用的结构化面包屑数据。
 # enableStyledScrollbar = true # Blowfish风格滚动条。true：禁用原生滚动条，false：开启原生滚动条
 
-replyByEmail = true # 文章末尾的邮件回复入口；需要配置作者邮箱。
+replyByEmail = false # 文章末尾的邮件回复入口；需要配置作者邮箱。
 
 # 首页最近文章来自哪些 content 子目录。
 # 例如文章在 content/article/，可以取消下面的注释：
@@ -140,40 +140,46 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
 
   showViews = false   # 阅读量需要 Firebase，未配置时保持关闭。
   showLikes = false   # 点赞量需要 Firebase，未配置时保持关闭。
-  showDateOnlyInArticle = false
-  showDateUpdated = true
-  showAuthor = true
-  # showAuthorBottom = false
+  showDateOnlyInArticle = false # 仅在文章详情页显示发布日期；不在列表卡片显示日期。
+  showDateUpdated = true # 是否显示文章「更新时间」
+  showAuthor = true # 文章显示作者信息
+  showAuthorBottom = false # 是否在文章底部显示作者简介卡片
 
-  showHero = true   # 文章顶部封面 Hero。当前关闭，页面更简洁。
-  # 开启showHero后可选：basic（基础班）、big（宽大版）、background（全屏背景）、thumbAndBackground（缩略图+背景）。
-  heroStyle = "thumbAndBackground"
+  showHero = true   # 文章顶部封面。
+  heroStyle = "Background" # 开启showHero后可选：basic（基础班）、big（宽大版）、background（全屏背景）、thumbAndBackground（缩略图+背景）。
 
+  # 背景式 Hero 的模糊和顶部间距设置。
+  layoutBackgroundBlur = true # 仅在heroStyle等于background或thumbAndBackground时使用。
+  layoutBackgroundHeaderSpace = true # 仅当 heroStyle 为 background 时才使用
+  
+  showBreadcrumbs = true # 面包屑导航，页面顶部「文档 / 分类 / 当前文章」路径导航条。
+  showDraftLabel = true # 用：草稿标签，当文章是 draft: true 草稿状态时，页面标题旁边显示红色「DRAFT」草稿标记。
+  
+  showEdit = false # 页面底部「编辑此页」按钮，点击跳转到 GitHub 该篇 Markdown 的编辑页面，方便直接在线修改文章。
+  # editURL = "https://github.com/username/repo/" # 编辑此页的链接
+  editAppendPath = true # 编辑链接是否自动拼接文章 md 文件路径
+  
+  seriesOpened = false #文章系列（series）组件
+  showHeadingAnchors = true # 鼠标悬浮标题，显示 # 锚点链接
 
-  layoutBackgroundBlur = true # only used when heroStyle equals background or thumbAndBackground
-  layoutBackgroundHeaderSpace = true # only used when heroStyle equals background
-  showBreadcrumbs = false
-  showDraftLabel = true
-  showEdit = false
-  # editURL = "https://github.com/username/repo/"
-  editAppendPath = true
-  seriesOpened = false
-  showHeadingAnchors = true
-  showPagination = true
-  invertPagination = false
-  showReadingTime = true
+  showPagination = true # 开启文章底部分页导航：上一篇 / 下一篇文章按钮。
+  invertPagination = true # 底部分页导航是否反转分页顺序：
+
+  showReadingTime = true # 显示阅读时长
   showTableOfContents = true # 显示文章目录（TOC） 的开关
-  # showRelatedContent = false
-  # relatedContentLimit = 3
-  showTaxonomies = false # Enable the display of taxonomies for the related article.
-  showCategories = true # These will show if showTaxonomies is true.
-  showTags = true # These will show if showTaxonomies is true.
-  showCategoriesInSecondaryColor = false # This will change the color of category badges, so the user can better distinguish between the two. Only if showTaxonomies is true.
-  showAuthorsBadges = false
-  showWordCount = true
-  # sharingLinks = [ "linkedin", "twitter", "bluesky", "mastodon", "reddit", "pinterest", "facebook", "email", "whatsapp", "telegram", "line"]
-  showZenMode = false
-  # externalLinkForceNewTab = false # disable to allow external links in the same tab (defaults to true)
+
+  # showRelatedContent = false  # 控制：文章底部是否显示相关推荐文章 豆包说已经废弃
+  # relatedContentLimit = 3 # 相关推荐文章显示的数量
+  showTaxonomies = false # 相关文章模块里面，是否显示标签 / 分类（taxonomies，tags、categories）。只对相关文章区块生效。
+  showCategories = true # 相关文章卡片里，是否显示分类 categories；依赖上面 taxonomies = true 才生效。
+  showTags = true # 相关文章卡片里面是否展示 tags 标签。依赖 taxonomies = true 才生效。
+  showCategoriesInSecondaryColor = false # 相关文章卡片内的分类标签徽章，是否使用第二主题颜色渲染，用来区分分类和标签。只有 taxonomies = true 才生效。
+  showAuthorsBadges = false # 相关文章卡片中，是否显示作者徽章标签。
+
+  showWordCount = true # 文章标题下方显示字数统计（共多少字）
+  # sharingLinks = [ "linkedin", "twitter", "bluesky", "mastodon", "reddit", "pinterest", "facebook", "email", "whatsapp", "telegram", "line"] # 文章底部分享按钮，弹出可以分享到各个社交平台的链接列表。
+  showZenMode = false # 阅读禅模式按钮，点击后隐藏侧边栏、导航栏，只保留文章正文，沉浸式阅读。
+  # externalLinkForceNewTab = false # 外部链接是否强制在新标签页打开。
 
 # --- 文章列表页，例如 /article/ ------------------------------
 
@@ -184,28 +190,33 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   # 开启showHero后可选：basic（基础班）、big（宽大版）、background（全屏背景）、thumbAndBackground（缩略图+背景）。
   heroStyle = "background"
 
-  layoutBackgroundBlur = true # only used when heroStyle equals background or thumbAndBackground
-  layoutBackgroundHeaderSpace = true # only used when heroStyle equals background
-  showBreadcrumbs = false
-  showSummary = false
-  showViews = false
-  showLikes = false
-  showTableOfContents = false
-  showCards = false
+  layoutBackgroundBlur = true # Hero 头部背景图是否启用模糊效果。生效前提：heroStyle = "background" 或者 heroStyle = "thumbAndBackground"。
+  layoutBackgroundHeaderSpace = true # 当 heroStyle = "background" 背景大图模式时，Hero 头部是否保留上方空白间距
+  showBreadcrumbs = false # 页面上方显示面包屑导航（主页 > 分类 > 当前文章）
+  showSummary = false # 相关文章卡片里面，是否展示文章摘要 summary，仅针对相关文章区块。
+  showViews = false # 文章是否展示阅读浏览量（访问计数）。
+  showLikes = false # 文章模块显示点赞按钮。静态站本身无后端，需要第三方点赞服务支持。
+  showTableOfContents = false # 文章是否显示目录 TOC（侧边 / 文章内目录）
+  showCards = false # 相关文章区块内，是否使用卡片样式渲染相关文章条目。仅对相关推荐模块生效。
   
   # 排序和显示形式。
   orderByWeight = true # 是否已weight方式进行排序，需要在md添加属性weight
   groupByYear = false # 文章列表是否已年分组
-  cardView = false
-  cardViewScreenWidth = false
-  constrainItemsWidth = false
+
+  cardView = false # 列表页（首页、分类页）是否整体使用卡片视图展示文章列表
+  cardViewScreenWidth = false # 卡片视图模式下，卡片是否占满屏幕宽度。
+  constrainItemsWidth = false # 列表页面（首页、分类列表）内容元素，是否约束最大内容宽度；配合 cardView 卡片模式使用。
+
+# --- 网站地图 ------------------------------------------------
 
 [sitemap]
   excludedKinds = ["taxonomy", "term"]
 
+# --- 分类总览页，例如 /categories/、/tags/ ------------------
+
 [taxonomy]
-  showTermCount = true
-  showHero = false
+  showTermCount = true # 分类 / 标签列表页面上，徽章后面显示该标签、分类下的文章数量
+  showHero = false # 首页是否渲染 Hero 头部大标题区块。
   # heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
   layoutBackgroundBlur = true # only used when heroStyle equals background or thumbAndBackground
   layoutBackgroundHeaderSpace = true # only used when heroStyle equals background
@@ -214,6 +225,8 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   showLikes = false
   showTableOfContents = false
   cardView = false
+
+# --- 单个分类或标签页，例如 /tags/hugo/ ---------------------
 
 [term]
   showHero = false

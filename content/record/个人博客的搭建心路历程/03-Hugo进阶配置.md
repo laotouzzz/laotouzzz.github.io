@@ -102,16 +102,44 @@ description: "此页面是使用 Hugo 的 Blowfish 主题搭建的"
 ![](/00-assets/record/个人博客的搭建心路历程/03-Hugo进阶配置/20260815-205814.png)
 
 ## 使用obsidian注意事项
-```
-方案 1：VS Code 批量替换（最简单，推荐，写完文章导出后跑一次）
-把 obsidian 写好的 md 放到 hugo 的 content，用 VS Code 全局正则替换。
-查找（正则模式打开）
-plaintext
-!\[(.*?)\]\((00-assets\/.*?)\)
-替换为
-plaintext
-![$1](/$2)
-效果：
-![](00‑assets/record/a.png) → ![](/00‑assets/record/a.png)
+我使用`obsidian`来进行编写我的文章内容，选择根目录的`content`作为`obsidian`仓库
+
+### `obsidian`软件简单配置
+
+设置/文件与链接/内部链接类型：基于仓库根目录的绝对路径
+
+我使用插件`Custom Attachment Location`来进行我的文章图片路径管理
+>新附件位置：`00-assets/${noteFolderPath}/${noteFileName}`
+>
+>生成的附件文件名：`${date:{momentJsFormat:'YYYYMMDD-HHmmss'}}`
+>
+>是否重命名附件文件夹：打开
+>
+>Should handle renames：打开
+>
+>空附件文件夹处理：选择删除
+>
+>是否删除孤立附件：打开
+>
+>
+
+问题：路径冲突
+>obsidian生成的文件路径为
+>
+>`![](00-assets/record/个人博客的搭建心路历程/03-Hugo进阶配置/20260815-205814.png)`
+>
+>因为`Hugo`识别不了`obsidian`的路径，需要改为如下
+>
+>`![](/00-assets/record/个人博客的搭建心路历程/03-Hugo进阶配置/20260815-205814.png)`
+
+快速改动方法-使用VS Code 全局正则替换
+
+>查找（正则模式打开）
+>
+>`!\[(.*?)\]\((00-assets\/.*?)\)`
+>
+>替换为
+>
+>`![$1](/$2)`
+
 只修改 md 文本，不会改动 obsidian 库里面源文件，只修改 hugo 这边副本。
-```

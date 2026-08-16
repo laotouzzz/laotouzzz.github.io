@@ -6,38 +6,38 @@
 # 有关每个参数的更多详细信息，请参阅主题文档。
 # https://blowfish.page/docs/getting-started/
 
-theme = "blowfish" # UNCOMMENT THIS LINE
+theme = "blowfish" # 指定使用 blowfish 主题，必须开启
 baseURL = "https://laotouzzz.cc.cd/"
-defaultContentLanguage = "en"
+defaultContentLanguage = "en" # 站点默认语言 en 英文
 
-pluralizeListTitles = "true" # hugo function useful for non-english languages, find out more in  https://gohugo.io/getting-started/configuration/#pluralizelisttitles
+pluralizeListTitles = "true" # Hugo 原生配置，英文环境下，自动把列表标题转为复数形式。
 
-enableRobotsTXT = true
-summaryLength = 0
+enableRobotsTXT = true # Hugo 原生开关，自动生成 robots.txt，给搜索引擎爬虫规则；true 开启，部署后 public 目录自动输出 robots.txt。
+summaryLength = 0 # 控制文章摘要自动截取的字数。0则为关闭自动摘要截取
 
-buildDrafts = false
-buildFuture = false
+buildDrafts = false # 是否构建标记为 draft: true 的草稿文章。
+buildFuture = false # 是否构建发布日期大于当前系统时间的未来时间文章。
 
-enableEmoji = true
+enableEmoji = true # 开启 emoji 短代码支持，内容里可以直接写 :smile: 这类表情语法渲染 emoji
 
 googleAnalytics = "G-XXXXXXXXX"
 
 [pagination]
-  pagerSize = 100
+  pagerSize = 100 # 控制列表每页展示多少篇文章
 
 [imaging]
   anchor = 'Center'
 
-[taxonomies]
-  tag = "tags"
-  category = "categories"
-  author = "authors"
-  series = "series"
+[taxonomies] # 分类体系（Hugo 原生）
+  tag = "tags" # 标签
+  category = "categories" # 栏目分类
+  author = "authors" # 作者分类
+  series = "series" # 文章系列合集
 
-[sitemap]
-  changefreq = 'daily'
-  filename = 'sitemap.xml'
-  priority = 0.5
+[sitemap] # 站点地图
+  changefreq = 'daily' # 页面更新频率提示给爬虫
+  filename = 'sitemap.xml' # 输出文件名
+  priority = 0.5 # 页面默认权重 0‑1
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]

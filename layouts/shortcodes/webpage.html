@@ -1,0 +1,33 @@
+{{- $url := .Get "url" -}}
+{{- $title := .Get "title" | default "网页预览" -}}
+{{- $height := .Get "height" | default "800px" -}}
+
+<div style="
+  width: 100%;
+  margin: 1.5rem 0;
+  overflow: hidden;
+  border: 1px solid #dcdfe6;
+  border-radius: 8px;
+  background: #ffffff;
+">
+  <iframe
+    src="{{ $url | safeURL }}"
+    title="{{ $title }}"
+    loading="lazy"
+    sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
+    style="
+      display: block;
+      width: 100%;
+      height: {{ $height }};
+      border: 0;
+      background: #ffffff;
+    ">
+  </iframe>
+</div>
+
+<p style="font-size: 0.9rem;">
+  如果网页无法显示，可以
+  <a href="{{ $url | safeURL }}" target="_blank" rel="noopener noreferrer">
+    在新窗口打开 {{ $title }}
+  </a>。
+</p>
