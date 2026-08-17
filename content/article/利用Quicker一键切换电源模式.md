@@ -6,9 +6,7 @@ title: 利用Quicker一键切换电源模式
 
 ## Powershell
 
-<details>
-<summary>📜点击展开 PowerShell 电源脚本</summary>
-
+{{< details summary="📂 点击展开完整 PowerShell 脚本" >}}
 ```
 
 Add-Type -AssemblyName PresentationFramework
@@ -408,3 +406,7 @@ $window.Add_PreviewKeyDown({
 
 [void]$window.ShowDialog()
 ```
+
+{{< /details >}}
+
+导入到Quicker即可
