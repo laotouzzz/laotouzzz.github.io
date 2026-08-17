@@ -146,7 +146,7 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   showAuthorBottom = false # 是否在文章底部显示作者简介卡片
 
   showHero = true   # 文章顶部封面。
-  heroStyle = "Background" # 开启showHero后可选：basic（基础班）、big（宽大版）、background（全屏背景）、thumbAndBackground（缩略图+背景）。
+  heroStyle = "thumbAndBackground" # 开启showHero后可选：basic（基础班）、big（宽大版）、background（全屏背景）、thumbAndBackground（缩略图+背景）。
 
   # 背景式 Hero 的模糊和顶部间距设置。
   layoutBackgroundBlur = true # 仅在heroStyle等于background或thumbAndBackground时使用。
@@ -165,7 +165,7 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   showPagination = true # 开启文章底部分页导航：上一篇 / 下一篇文章按钮。
   invertPagination = true # 底部分页导航是否反转分页顺序：
 
-  showReadingTime = true # 显示阅读时长
+  showReadingTime = false # 显示阅读时长
   showTableOfContents = true # 显示文章目录（TOC） 的开关
 
   # showRelatedContent = false  # 控制：文章底部是否显示相关推荐文章 豆包说已经废弃
@@ -176,7 +176,7 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   showCategoriesInSecondaryColor = false # 相关文章卡片内的分类标签徽章，是否使用第二主题颜色渲染，用来区分分类和标签。只有 taxonomies = true 才生效。
   showAuthorsBadges = false # 相关文章卡片中，是否显示作者徽章标签。
 
-  showWordCount = true # 文章标题下方显示字数统计（共多少字）
+  showWordCount = false # 文章标题下方显示字数统计（共多少字）
   # sharingLinks = [ "linkedin", "twitter", "bluesky", "mastodon", "reddit", "pinterest", "facebook", "email", "whatsapp", "telegram", "line"] # 文章底部分享按钮，弹出可以分享到各个社交平台的链接列表。
   showZenMode = false # 阅读禅模式按钮，点击后隐藏侧边栏、导航栏，只保留文章正文，沉浸式阅读。
   # externalLinkForceNewTab = false # 外部链接是否强制在新标签页打开。
@@ -188,7 +188,7 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   # 列表页不使用 Hero 和卡片，保持普通简洁样式。
   showHero = true # 文章列表页封面
   # 开启showHero后可选：basic（基础班）、big（宽大版）、background（全屏背景）、thumbAndBackground（缩略图+背景）。
-  heroStyle = "background"
+  heroStyle = "thumbAndbackground"
 
   layoutBackgroundBlur = true # Hero 头部背景图是否启用模糊效果。生效前提：heroStyle = "background" 或者 heroStyle = "thumbAndBackground"。
   layoutBackgroundHeaderSpace = true # 当 heroStyle = "background" 背景大图模式时，Hero 头部是否保留上方空白间距
