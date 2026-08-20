@@ -172,11 +172,28 @@
 }
 
 @media (max-width: 640px) {
+  .meld-encrypted-card {
+    padding: 0.9rem;
+  }
+
   .meld-encrypted-controls {
     flex-direction: column;
+    align-items: stretch;
+    gap: 0.65rem;
+  }
+
+  .meld-encrypted-password-wrap {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .meld-encrypted-password {
+    width: 100%;
+    min-height: 2.75rem;
   }
 
   .meld-encrypted-unlock {
     width: 100%;
+    min-height: 2.75rem;
   }
 }
