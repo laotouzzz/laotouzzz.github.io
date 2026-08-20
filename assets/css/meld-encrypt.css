@@ -1,0 +1,182 @@
+.meld-encrypted-card {
+  --meld-border: color-mix(in srgb, currentColor 18%, transparent);
+  --meld-muted: color-mix(in srgb, currentColor 62%, transparent);
+  --meld-soft: color-mix(in srgb, currentColor 6%, transparent);
+  --meld-danger: #c0392b;
+  margin: 1.4rem 0;
+  padding: 1rem 1.05rem;
+  border: 1px solid var(--meld-border);
+  border-radius: 10px;
+  background: var(--meld-soft);
+  font: inherit;
+}
+
+.meld-encrypted-heading {
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+}
+
+.meld-encrypted-lock {
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+.meld-encrypted-title {
+  font-weight: 650;
+  line-height: 1.35;
+}
+
+.meld-encrypted-meta {
+  margin-top: .15rem;
+  font-size: .78rem;
+  color: var(--meld-muted);
+}
+
+.meld-encrypted-hint {
+  display: flex;
+  gap: .4rem;
+  margin-top: .8rem;
+  padding: .55rem .7rem;
+  border-radius: 7px;
+  background: color-mix(in srgb, #d6a11d 10%, transparent);
+  font-size: .88rem;
+}
+
+.meld-encrypted-controls {
+  display: flex;
+  gap: .6rem;
+  margin-top: .9rem;
+  align-items: stretch;
+}
+
+.meld-encrypted-password-wrap {
+  position: relative;
+  flex: 1 1 15rem;
+  min-width: 0;
+}
+
+.meld-encrypted-password {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 2.55rem;
+  padding: .55rem 3.4rem .55rem .75rem;
+  border: 1px solid var(--meld-border);
+  border-radius: 7px;
+  background: var(--theme, transparent);
+  color: inherit;
+  font: inherit;
+}
+
+.meld-encrypted-password:focus {
+  outline: 2px solid color-mix(in srgb, currentColor 28%, transparent);
+  outline-offset: 1px;
+}
+
+.meld-encrypted-eye {
+  position: absolute;
+  right: .35rem;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 0;
+  background: transparent;
+  color: var(--meld-muted);
+  cursor: pointer;
+  padding: .3rem .4rem;
+  font: inherit;
+  font-size: .78rem;
+}
+
+.meld-encrypted-unlock,
+.meld-encrypted-relock {
+  border: 1px solid var(--meld-border);
+  border-radius: 7px;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+}
+
+.meld-encrypted-unlock {
+  flex: 0 0 auto;
+  min-height: 2.55rem;
+  padding: .55rem .9rem;
+  font-weight: 600;
+}
+
+.meld-encrypted-unlock:hover,
+.meld-encrypted-relock:hover,
+.meld-encrypted-eye:hover {
+  background: color-mix(in srgb, currentColor 8%, transparent);
+}
+
+.meld-encrypted-unlock:disabled {
+  opacity: .6;
+  cursor: wait;
+}
+
+.meld-encrypted-status {
+  min-height: 1.25rem;
+  margin-top: .55rem;
+  color: var(--meld-muted);
+  font-size: .82rem;
+}
+
+.meld-encrypted-status.is-error {
+  color: var(--meld-danger);
+}
+
+.meld-encrypted-card.is-error {
+  border-color: color-mix(in srgb, var(--meld-danger) 40%, transparent);
+}
+
+.meld-encrypted-openbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: .75rem;
+  margin-bottom: .9rem;
+  color: var(--meld-muted);
+  font-size: .8rem;
+}
+
+.meld-encrypted-relock {
+  padding: .3rem .55rem;
+  font-size: .78rem;
+}
+
+.meld-encrypted-content > :first-child {
+  margin-top: 0;
+}
+
+.meld-encrypted-content > :last-child {
+  margin-bottom: 0;
+}
+
+.meld-encrypted-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+.meld-encrypted-content table {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.meld-encrypted-plaintext-fallback {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  margin: 0;
+  font: inherit;
+}
+
+@media (max-width: 640px) {
+  .meld-encrypted-controls {
+    flex-direction: column;
+  }
+
+  .meld-encrypted-unlock {
+    width: 100%;
+  }
+}

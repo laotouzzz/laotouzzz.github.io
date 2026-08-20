@@ -40,7 +40,7 @@ googleAnalytics = "G-XXXXXXXXX"
   priority = 0.5 # 页面默认权重 0‑1
 
 [outputs]
-  home = ["HTML", "RSS", "JSON"]
+  home = ["HTML", "RSS", "JSON"] # 首页同时输出：网页 HTML、RSS 订阅、JSON 格式输出。
 
 [related]
   threshold = 0

@@ -1,0 +1,14 @@
+{{/* Blowfish + Meld Encrypt: scripts, loaded through Hugo Pipes. */}}
+{{- $alg := site.Params.fingerprintAlgorithm | default "sha512" -}}
+
+{{- with resources.Get "vendor/markdown-it.min.js" -}}
+  {{- $md := . | resources.Fingerprint $alg -}}
+  <script defer src="{{ $md.RelPermalink }}" integrity="{{ $md.Data.Integrity }}"></script>
+{{- else -}}
+  {{- warnf "Meld unlocker: assets/vendor/markdown-it.min.js not found; decrypted content will fall back to plain text." -}}
+{{- end -}}
+
+{{- with resources.Get "js/meld-encrypt.js" -}}
+  {{- $js := . | resources.Minify | resources.Fingerprint $alg -}}
+  <script defer src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+{{- end -}}

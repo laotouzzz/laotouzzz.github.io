@@ -1,0 +1,6 @@
+{{/* Blowfish + Meld Encrypt: stylesheet, loaded through Hugo Pipes. */}}
+{{- $alg := site.Params.fingerprintAlgorithm | default "sha512" -}}
+{{- with resources.Get "css/meld-encrypt.css" -}}
+  {{- $css := . | resources.Minify | resources.Fingerprint $alg -}}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+{{- end -}}
