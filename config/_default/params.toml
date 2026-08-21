@@ -67,7 +67,7 @@ hotlinkFeatureImage = false # 是否直接热链接外部封面。使用本地�
 
 highlightCurrentMenuArea = true # 访问某个栏目时，高亮对应的顶部菜单。
 smartTOC = true # 智能目录：阅读到哪个标题，就高亮哪个目录项。
-smartTOCHideUnfocusedChildren = false # 是否隐藏当前阅读区域以外的深层目录。false 会保留完整目录。
+smartTOCHideUnfocusedChildren = true # 是否隐藏当前阅读区域以外的深层目录。false 会保留完整目录。
 
 # 静态资源指纹算法，用于避免浏览器缓存旧 CSS/JS。
 fingerprintAlgorithm = "sha512" # Valid values are "sha512" (default), "sha384", "sha256"
