@@ -23,7 +23,7 @@ title = "LAOTOU的个人博客"
   bio = "哈哈哈哈哈" # 个人简介
   links = [
       {email = "mailto:laotouzzz@qq.com"},
-      {github = "https://github.com/laotouzzz"},
+      {github = "https://github.com/"},
       {microsoft = "https://www.microsoft.com/"},
   ]
 

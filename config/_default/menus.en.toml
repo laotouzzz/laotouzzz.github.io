@@ -68,7 +68,7 @@
     identifier = "GitHub"  # identifier用来防止name重名，识别不到
     name = " "
     pre = "github" # pre在菜单文字前面加一个小图标，图标名称来自Blowfish自带的图标库。显示GitHub的小标志。
-    url = "https://github.com/laotouzzz/laotouzzz.github.io"
+    url = "https://github.com/"
     weight = 40
 
 [[main]]
