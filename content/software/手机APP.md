@@ -54,7 +54,7 @@ webdav备份设置
 
 
 习惯打卡uhabits
->[点击前往GitHub]([https://github.com/iSoron/uhabits/releases/tag/v2.3.1](https://github.com/iSoron/uhabits/releases/tag/v2.3.1))
+>[点击前往GitHub](https://github.com/iSoron/uhabits/releases/tag/v2.3.1))
 
 一木记账
 >用了好几年了，支持webdav随时备份，挺好用的，永久会员116，涨了几次，但是我没买
