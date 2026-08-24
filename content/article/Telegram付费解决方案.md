@@ -1,8 +1,7 @@
 ---
 title: Telegram付费解决方案
 date: 2026-08-13
-lastmod: 2026-08-15
+lastmod: 2026-08-24
 ---
 
-付费
-阿萨德
+还没写

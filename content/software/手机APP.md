@@ -1,6 +1,6 @@
 ---
 date: 2026-07-10
-lastmod: 2026-08-23
+lastmod: 2026-08-24
 title: 手机APP
 weight: "7"
 ---
@@ -44,7 +44,7 @@ weight: "7"
 
 webdav备份设置
 
-🔐β +IWYN2c4FYmth6BtaKlS2nXCiAb8fI0WPk8/EOZBFNgUgik+hm7vy7DOZGzftnGzATJaQgNa6qTMugr+FtUaARrFFa9kIEakQfiYUjDjn+jJT+qGhJfLS5AbujbK6qKYgtF+O5L95lNCMH4dOzidB5hDaxrENPz2hN0= 🔐
+🔐β gIskbn8pbbWQTfqjUX9I5O1b1yM7TXOZeCk4GEDfm01/KsfLF0WPzrQHRsjQ5d4qRol0+h9W9a4ado+ceDA4U/iW0GMySYT/WYSRGV3vxljX6X3YGBApl9T3x6m75maG0xxi4JlkOODyXlpZS0kaC2Y7acZjQaWCcpA= 🔐
 
 
 ### 日子
@@ -62,4 +62,5 @@ webdav备份设置
 ### 一木记账
 >用了好几年了，支持webdav随时备份，挺好用的，永久会员116，涨了几次，但是我没买
 
-🔐β CI8ZGVPLSlgWDxeJbyFm0nPLl2uzCelI6cVRXVwfpygIez3iXZicstvcS3ynNEZ/Kcjz1/jdfPVNbjIQ37Yg7pKjN7/Hvw5O9KMUXteo7x9u+edq1SsTQGOrDFDPJcnp3Q/r9DdrDGcFvoV+fQnG4AXDwJ8NefAahJ90S8GtUI0z/CxVhp1W0ab9xIxjPbvczGnb/buXiScA1aQqH2Lt 🔐
+webdav备份设置
+🔐β DiSdR+MmUXPOeBS+K6i4c2P+n7ARFPEFS2IMU7o+JGUrDqO0u8RhRBu7kg2TigrohlVcJ1PgO5GX99GvDmsdY/3IcjLEshIet3gFKHrjBEQohvRd8U8ReLxsMp5FIikWE6T9MyZg/0nRmmV1hJV48qUl/AWiJcI7t7e1fnWAxdoDQk3pGDCb/0gSmxH/Q76NDLsKsWTMA/qrHtRy1nsH 🔐
