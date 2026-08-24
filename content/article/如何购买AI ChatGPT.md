@@ -11,6 +11,6 @@ https://familypro.io/cn/blog/how-to-get-shared-gpt-account
 ## 购买gpt的网址
 FamilyPro：[https://familypro.io/cn](https://familypro.io/cn)
 
-🔐β vullTbdT5HwyQP/Bs56meLrEDVeLsjZs2QZu+o7x8+XPKV/rdsxfSj6YnDMMN85FMB4UGwcZQYQpY6j/ETfBiL86blxJetqlRV6+D0tR 🔐
+🔐β E1ieAjYMG7r3QstMqGPyIcsNv08ocytjz0zEjow66hm+jFCEtBhVFwjaEtpitx1+w44NMWeBxY7ZCLXF5wxdaXWMoxrh1m0fknABgsM3z1m7R1RFPZM= 🔐
 
 
