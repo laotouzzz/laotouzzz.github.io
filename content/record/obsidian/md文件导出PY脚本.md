@@ -57,7 +57,7 @@ python obsidian_exporter.py test.md -o ./export --export-images --zip
 ```
 # 要求
 打开obsidian设置，按照图片要求，设置内部链接类型为：基于仓库根目录的绝对路径
-![](record/obsidian/00-assets/obsidian导出PY脚本-20260427-174309.jpg)
+![](/record/obsidian/00-assets/obsidian导出PY脚本-20260427-174309.jpg)
 # 代码
 
 ```

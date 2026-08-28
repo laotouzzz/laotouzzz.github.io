@@ -93,9 +93,9 @@ v1使用方式：新建txt文件复制代码到里面，然后将txt修改为htm
 
 v3使用方式：
 1. 复制如下内容
-![](record/obsidian/01-社区插件/00-assets/assets-20260701-125353.jpg)
+![](/record/obsidian/01-社区插件/00-assets/assets-20260701-125353.jpg)
 2. 打开网页托管网址-粘贴上面的内容
-![](record/obsidian/01-社区插件/00-assets/assets-20260701-125455.jpg)
+![](/record/obsidian/01-社区插件/00-assets/assets-20260701-125455.jpg)
 3. 输入解密密码即可
 ### v1 
 ```
