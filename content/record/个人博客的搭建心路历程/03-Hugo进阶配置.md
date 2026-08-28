@@ -1,7 +1,7 @@
 ---
 title: 03-Hugo进阶配置
 date: 2026-08-15
-lastmod: 2026-08-16
+lastmod: 2026-08-28
 weight: "3"
 ---
 
@@ -74,7 +74,7 @@ jobs:
 
 将Build and deployment修改为GitHub Actions，此选项解释可以自行AI搜索
 
-![](/00-assets/record/个人博客的搭建心路历程/03-Hugo进阶配置/20260815-201737.png)
+![](/record/个人博客的搭建心路历程/00-assets/20260815-201737.png)
 
 
 参考文档：由豆包辅助完成
@@ -99,17 +99,20 @@ description: "此页面是使用 Hugo 的 Blowfish 主题搭建的"
 ```
 示例图片
 
-![](/00-assets/record/个人博客的搭建心路历程/03-Hugo进阶配置/20260815-205814.png)
+![](/record/个人博客的搭建心路历程/00-assets/20260815-205814.png)
 
 ## 使用obsidian注意事项
 我使用`obsidian`来进行编写我的文章内容，选择根目录的`content`作为`obsidian`仓库
 
-### `obsidian`软件简单配置
+### obsidian软件简单配置
 
+上次修改
 设置/文件与链接/内部链接类型：基于仓库根目录的绝对路径
 
 我使用插件`Custom Attachment Location`来进行我的文章图片路径管理
->新附件位置：`00-assets/${noteFolderPath}/${noteFileName}`
+>~~新附件位置：`00-assets/${noteFolderPath}/${noteFileName}`~~
+>
+><font color="#00b050">20260828修改</font>-新附件位置：`/${noteFolderPath}/00-assets`
 >
 >生成的附件文件名：`${date:{momentJsFormat:'YYYYMMDD-HHmmss'}}`
 >
@@ -121,22 +124,28 @@ description: "此页面是使用 Hugo 的 Blowfish 主题搭建的"
 >
 >是否删除孤立附件：打开
 >
->
 
+
+上次改动
 问题：路径冲突
 >obsidian生成的文件路径为
 >
->`![](00-assets/record/个人博客的搭建心路历程/03-Hugo进阶配置/20260815-205814.png)`
+>~~`![](00-assets/record/个人博客的搭建心路历程/03-Hugo进阶配置/20260815-205814.png)`~~
+>
+><font color="#00b050">20260828修改</font>-`![](record/个人博客的搭建心路历程/00-assets/20260815-205814.png)`
 >
 >因为`Hugo`识别不了`obsidian`的路径，需要改为如下
 >
->`![](/00-assets/record/个人博客的搭建心路历程/03-Hugo进阶配置/20260815-205814.png)`
+>~~`![](/00-assets/record/个人博客的搭建心路历程/03-Hugo进阶配置/20260815-205814.png)`~~
+>
+><font color="#00b050">20260828修改</font>-`![](/record/个人博客的搭建心路历程/00-assets/20260815-205814.png)`
+
 
 快速改动方法-使用VS Code 全局正则替换
 
 >查找（正则模式打开）
 >
->`!\[(.*?)\]\((00-assets\/.*?)\)`
+>`!\[(.*?)\]\((record\/.*?)\)`
 >
 >替换为
 >

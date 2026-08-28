@@ -1,12 +1,12 @@
 ---
 title: 04-使用Flclash为局域网其他设备提供代理服务
 date: 2026-08-08
-lastmod: 2026-08-16
+lastmod: 2026-08-28
 ---
 
 ## 前置需求
 打开局域网代理和记住端口
-![](/00-assets/science-networking/04-使用Flclash为局域网其他设备提供代理服务/20260816-155434.png)
+![](/science-networking/00-assets/20260816-155434.png)
 ## 设置代理
 记住电脑本机的ip地址，`win+r`输入`cmd`，弹出窗口输入`ipconfig`，查看ipv4地址，假设为`192.168.50.49`
 
@@ -21,4 +21,4 @@ lastmod: 2026-08-16
 点击右上角存储后，Iphone即可通过 Clash for Windows 访问网络。
 
 其他任何支持 WLAN 配置代理的设备皆（switch，PS5 等）可通过此方法配置联网，配置方式大同小异。
-![](/00-assets/science-networking/04-使用Flclash为局域网其他设备提供代理服务/20260816-155454.png)
+![](/science-networking/00-assets/20260816-155454.png)

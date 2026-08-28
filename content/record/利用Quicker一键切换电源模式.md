@@ -1,6 +1,6 @@
 ---
 date: 2026-08-16
-lastmod: 2026-08-17
+lastmod: 2026-08-28
 title: 利用Quicker一键切换电源模式
 ---
 
