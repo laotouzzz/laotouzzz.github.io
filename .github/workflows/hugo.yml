@@ -2,11 +2,19 @@ name: Build Hugo Site
 on:
   push:
     branches: [ main ]
+  # 支持从 Actions 页面手动重新发布。
+  workflow_dispatch:
 
 permissions:
   contents: read
   pages: write
   id-token: write
+
+# GitHub Pages 同一时间只允许一个发布任务；后续任务排队。
+# 保留正在进行的部署，避免连续推送导致部署请求冲突。
+concurrency:
+  group: pages
+  cancel-in-progress: false
 
 jobs:
   build:
