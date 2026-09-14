@@ -1,7 +1,10 @@
 ---
-title: 个人博客的搭建心路历程
+title: 01-个人博客的搭建心路历程
 description: 技术相关记录
 date: 2026-08-15
-lastmod: 2026-08-17
+lastmod: 2026-09-14
+url: /record/01/
+weight: "1"
+orderByWeight: "true"
 ---
 哈哈哈哈哈

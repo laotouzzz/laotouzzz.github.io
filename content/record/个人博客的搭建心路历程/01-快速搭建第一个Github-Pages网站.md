@@ -1,8 +1,9 @@
 ---
 title: 01-快速搭建第一个Github-Pages网站
 date: 2026-08-13 12:52:53
-lastmod: 2026-08-28
+lastmod: 2026-09-14
 weight: "1"
+url: /record/01/01
 ---
 
 ## 搭建个人（组织）类型的网站

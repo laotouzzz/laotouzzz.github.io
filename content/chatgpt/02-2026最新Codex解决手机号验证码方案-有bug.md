@@ -4,6 +4,7 @@ date: 2026-09-04
 lastmod: 2026-09-14
 title: 02-2026最新Codex解决手机号验证码方案-有bug
 weight: "2"
+slug: "02"
 ---
 
 bug：虽然可以登录进去但是用不了codex工作的能力，可以在插件[GitHub网址](https://github.com/zhishile/codex-auth-helper)的issues查看
