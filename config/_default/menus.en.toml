@@ -12,7 +12,8 @@
 
 # -- 主菜单 --
 # 主菜单显示在页面顶部的页眉中。
-# 可接受的参数有：name、pageRef、page、url、title、weight。
+# 可接受的参数有：name、pre、pageRef、page、url、title、weight。
+# pre 填写 Blowfish 内置图标名称（不含 .svg），由官方模板在菜单文字前显示图标。
 # 
 # 最简单的菜单配置方式是提供：
 #   name = 此菜单链接显示的名称
@@ -25,12 +26,14 @@
 
 [[main]]  # main菜单：显示在网站顶部的页眉处。通常用来放最重要的页面，比如“首页”、“博客”、“关于”等。
     name = "首页" # name指的是菜单上显示给你的访客看的文字
+    pre = "globe" # Blowfish 自带 SVG 图标：地球图标：博客首页
     pageRef = "/"
     weight = 1 # weight数值越小，菜单越靠左（排在前面）
 
 
 [[main]]
     name = "专题"
+    pre = "list" # Blowfish 自带 SVG 图标：列表图标：专题导航
     weight = 2
 
     [[main]]
@@ -47,17 +50,20 @@
 
 [[main]]
     name = "折腾记录"
+    pre = "code" # Blowfish 自带 SVG 图标：代码图标：技术折腾记录
     weight = 3
     pageRef = "record"
 
 
 [[main]]
     name = "种类"
+    pre = "tag" # Blowfish 自带 SVG 图标：标签图标：内容种类
     weight = 4
     pageRef = "article"
 
 [[main]]
     name = "文章"
+    pre = "file-lines" # Blowfish 自带 SVG 图标：文档图标：文章
     weight = 3
     pageRef = "article"
 

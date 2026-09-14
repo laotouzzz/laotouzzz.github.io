@@ -48,10 +48,12 @@ disableImageOptimizationMD = false # 是否只关闭 Markdown 图片 ![](路径)
 disableTextInHeader = false # true 时页眉只显示 Logo，不显示文字。
 # backgroundImageWidth = 1200 # 背景图片处理后的宽度，通常保持默认。
 
-# background 首页和 background Hero 使用的全站默认背景。
-# 图片应位于 assets/img/background.svg。
-# 如果把首页 layout 改成 background，建议取消下面的注释。
-defaultBackgroundImage = "img/background.svg" 
+# 全站默认背景图，路径相对于 assets 目录；与首页使用同一张图片。
+defaultBackgroundImage = "img/background.jpg"
+
+# 开启全站固定全屏背景，让文章页、栏目页等页面也显示背景。
+# 必须放在文件顶层；主题会自动叠加遮罩，保证正文易读。
+backgroundCanvas = true
 
 # defaultFeaturedImage = "img/background.svg" # 所有没有单独封面的文章使用的默认封面。
 
@@ -89,8 +91,12 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
 [seo]
 # metaDescriptionOrder = ["summary", "description", "site"] # Controls the fallback order for the HTML meta description. Valid values are "summary", "description", and "site".
 
-[header]
-  layout = "basic" # valid options: basic, fixed, fixed-fill, fixed-gradient, fixed-fill-blur
+[header] # 页眉与导航栏设置
+  # basic：普通导航栏；floating：圆角半透明浮动导航栏，固定在页面顶部，Logo 自动缩小。
+  # 其他布局：fixed、fixed-fill、fixed-gradient、fixed-fill-blur。
+  layout = "floating"
+  # 手机端菜单：dropdown 为下拉菜单；fullscreen 为全屏菜单。
+  mobileMenuStyle = "dropdown"
 
 [footer]
   showMenu = true
@@ -112,7 +118,7 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   layout = "background"
 
   # 首页主图。必须存在：assets/img/background.svg
-  homepageImage = "img/background.svg"  # 只有hero，card，background布局方式才能正常显示图片：
+  homepageImage = "img/background.jpg"  # 只有hero，card，background布局方式才能正常显示图片：
 
   showRecent = false # 是否在首页展示最近写的文章
   showRecentItems = 4  # 最近文章展示的数量
@@ -188,7 +194,7 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   # 列表页不使用 Hero 和卡片，保持普通简洁样式。
   showHero = true # 文章列表页封面
   # 开启showHero后可选：basic（基础班）、big（宽大版）、background（全屏背景）、thumbAndBackground（缩略图+背景）。
-  heroStyle = "thumbAndbackground"
+  heroStyle = "background"
 
   layoutBackgroundBlur = true # Hero 头部背景图是否启用模糊效果。生效前提：heroStyle = "background" 或者 heroStyle = "thumbAndBackground"。
   layoutBackgroundHeaderSpace = true # 当 heroStyle = "background" 背景大图模式时，Hero 头部是否保留上方空白间距
