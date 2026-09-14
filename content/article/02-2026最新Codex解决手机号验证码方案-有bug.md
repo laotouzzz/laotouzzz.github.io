@@ -1,10 +1,16 @@
 ---
 source: https://juejin.cn/post/7646723041637236751
 date: 2026-09-04
-lastmod: 2026-09-04
-title: 02-2026最新Codex 解决手机号验证码方案
+lastmod: 2026-09-13
+title: 02-2026最新Codex解决手机号验证码方案-有bug
+weight: "2"
 ---
 
+bug：虽然可以登录进去但是用不了codex工作的能力，可以在插件[GitHub网址](https://github.com/zhishile/codex-auth-helper)的issues查看
+
+[issues](https://github.com/zhishile/codex-auth-helper/issues/77)
+![](article/00-assets/20260913-144823.png)
+>老头说法：我尝试了一下先登录成功后，codex点击退出登录然后重新点击登录，切换到网页端后没有跳出手机验证码，直接登录成功了
 ## 1 Codex 解决手机号验证码问题
 
 > 适用场景：配置 **OpenAI Codex CLI** 或者 **登录 Codex APP 桌面端** 时，登录要求绑定手机号、收不到短信验证码，或无法正常完成短信验证。

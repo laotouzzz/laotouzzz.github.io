@@ -15,7 +15,7 @@ title = "LAOTOU的个人博客"
   #copyright = "Copy, _right?_ :thinking_face:" # 底部版权信息，取消注释自定义版权文案
 
 [params.author]
-  name = "LAOTOU"
+  name = "欢迎来到LAOTOU的个人博客"
   email = "laotouzzz@qq.com"
   image = "img/laotou-logo.png" # 头像设置
   imageQuality = 100 # 图片质量
