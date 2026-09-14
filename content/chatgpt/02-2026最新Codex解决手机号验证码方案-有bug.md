@@ -1,7 +1,7 @@
 ---
 source: https://juejin.cn/post/7646723041637236751
 date: 2026-09-04
-lastmod: 2026-09-13
+lastmod: 2026-09-14
 title: 02-2026最新Codex解决手机号验证码方案-有bug
 weight: "2"
 ---
@@ -9,7 +9,7 @@ weight: "2"
 bug：虽然可以登录进去但是用不了codex工作的能力，可以在插件[GitHub网址](https://github.com/zhishile/codex-auth-helper)的issues查看
 
 [issues](https://github.com/zhishile/codex-auth-helper/issues/77)
-![](article/00-assets/20260913-144823.png)
+![](/chatgpt/00-assets/20260913-144823.png)
 >老头说法：我尝试了一下先登录成功后，codex点击退出登录然后重新点击登录，切换到网页端后没有跳出手机验证码，直接登录成功了
 ## 1 Codex 解决手机号验证码问题
 
@@ -60,13 +60,13 @@ Codex CLI 首次登录时，部分账号会卡在：
 2. 开启右上角 **「开发者模式」(Developer mode)** 。
 3. 点击 **「加载已解压的扩展程序」(Load unpacked)** 。
 4. 选择解压后的 **`extension` 目录** （该目录下必须有 `manifest.json` ）。 
-![](/article/00-assets/20260904-224406.png)
+![](/chatgpt/00-assets/20260904-224406.png)
 
 #### 1.3.3 步骤 3：检查是否加载成功
 
 在扩展列表中应能看到 **Codex 认证助手** ，启用状态正常，无报错。
 
-![](/article/00-assets/20260904-223949.png)
+![](/chatgpt/00-assets/20260904-223949.png)
 
 若加载失败，常见原因：
 
@@ -77,7 +77,7 @@ Codex CLI 首次登录时，部分账号会卡在：
 #### 1.3.4 步骤 4：固定扩展程序
 
 点击工具栏 **拼图图标** → 找到 **Codex 认证助手** → **固定** 。 
-![](/article/00-assets/20260904-225004.png)
+![](/chatgpt/00-assets/20260904-225004.png)
 
 #### 1.3.5 步骤 5：导出身份信息
 
@@ -87,7 +87,7 @@ Codex CLI 首次登录时，部分账号会卡在：
 4. 点击 **「导出身份信息」** 或 **「生成并保存 auth.json」** ，浏览器会下载 `auth.json` 。
 
 
-![637](/article/00-assets/20260904-224217.png)
+![](/chatgpt/00-assets/20260904-224217.png)
 
 #### 1.3.6 步骤 6：放置 auth.json 并验证 Codex
 

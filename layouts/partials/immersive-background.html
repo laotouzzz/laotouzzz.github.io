@@ -1,0 +1,24 @@
+{{/* 清晰全屏背景与滚动模糊层，复用 Blowfish 的官方背景脚本。 */}}
+{{ $image := site.Store.Get "defaultBackgroundImage" }}
+{{ $url := $image.url }}
+{{ with $image.obj }}{{ $url = .RelPermalink }}{{ end }}
+{{ if .IsHome }}
+  {{ with site.Params.homepage.homepageImage }}
+    {{ with resources.Get . }}{{ $url = .RelPermalink }}{{ end }}
+  {{ end }}
+{{ end }}
+{{ with $url }}
+  {{/* 本页自行绘制背景，避免与官方全站背景重复叠加。 */}}
+  {{ $.Store.Set "suppressBackgroundCanvas" true }}
+  <div class="immersive-background" aria-hidden="true">
+    <img src="{{ . }}" alt="" role="presentation" fetchpriority="high" decoding="async" class="nozoom">
+    <div class="immersive-background-shade"></div>
+  </div>
+  <div id="background-blur" class="immersive-background-blur" aria-hidden="true">
+    {{/* 同一图片由浏览器缓存复用，模糊层渐显，避免 backdrop-filter 的层叠限制。 */}}
+    <img src="{{ . }}" alt="" role="presentation" decoding="async" class="nozoom">
+    <div class="immersive-reading-shade"></div>
+  </div>
+  {{ $script := resources.Get "js/background-blur.js" | resources.Minify | resources.Fingerprint (site.Params.fingerprintAlgorithm | default "sha512") }}
+  <script src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" data-blur-id="background-blur" data-scroll-divisor="{{ site.Params.immersiveBlurDistance | default 900 }}"></script>
+{{ end }}

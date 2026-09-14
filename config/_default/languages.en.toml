@@ -2,7 +2,7 @@ disabled = false
 locale = "en"
 label = "English"
 weight = 1
-title = "LAOTOU的个人博客"
+title = "LAOTOU"
 
 [params]
   displayName = "en" # 界面显示语言名称
@@ -23,7 +23,7 @@ title = "LAOTOU的个人博客"
   bio = "哈哈哈哈哈" # 个人简介
   links = [
       {email = "mailto:laotouzzz@qq.com"},
-      {github = "https://github.com/"},
+      {github = "https://github.com/laotouzzz/laotouzzz.github.io"},
       {microsoft = "https://www.microsoft.com/"},
   ]
 

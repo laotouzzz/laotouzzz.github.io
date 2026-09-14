@@ -55,6 +55,12 @@ defaultBackgroundImage = "img/background.jpg"
 # 必须放在文件顶层；主题会自动叠加遮罩，保证正文易读。
 backgroundCanvas = true
 
+# 项目自定义沉浸式首屏：背景保持清晰，正文从第二屏开始。
+# 改回普通文章布局时可关闭此项；首页布局可改回 background。
+immersiveBackground = true
+# 滚动模糊渐变距离（像素）：数值越大，变化越缓慢。
+immersiveBlurDistance = 900
+
 # defaultFeaturedImage = "img/background.svg" # 所有没有单独封面的文章使用的默认封面。
 
 # defaultSocialImage = "/android-chrome-512x512.png" # 分享到社交平台时使用的默认图片。
@@ -115,13 +121,13 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   # card       图片卡片首页
   # background 整页背景首页
   # custom     自定义模板，需要自己写 custom.html
-  layout = "background"
+  layout = "custom" # 使用项目自定义的全屏首屏，保留官方个人资料与文章列表。
 
-  # 首页主图。必须存在：assets/img/background.svg
-  homepageImage = "img/background.jpg"  # 只有hero，card，background布局方式才能正常显示图片：
+  # 首页主图，路径相对于 assets；本项目 custom 布局也会读取此项。
+  homepageImage = "img/background.jpg"
 
-  showRecent = false # 是否在首页展示最近写的文章
-  showRecentItems = 4  # 最近文章展示的数量
+  showRecent = true # 是否在首页展示最近写的文章
+  showRecentItems = 6  # 最近文章展示的数量
   showMoreLink = false  # 最近文章末尾是否显示“查看更多”。
 
   # “查看更多”跳转地址。
@@ -131,8 +137,9 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   cardView = false  # 最近文章是否使用图片卡片。false 更简洁。
   cardViewScreenWidth = false # 卡片是否扩展到屏幕宽度，仅在 cardView = true 时生效。
 
-  # background为首页布局时，滚动时是否模糊背景；
-  layoutBackgroundBlur = false # 仅在布局（layout）设置为 background 时生效
+  # 官方 background 布局的滚动模糊开关。
+  # 当前 custom 布局复用官方脚本，渐变距离由顶层 immersiveBlurDistance 控制。
+  layoutBackgroundBlur = true
 
   # hero为首页布局时，是否关闭图片滤镜。
   # false 保留滤镜，文字更清楚；true 更接近图片原色。

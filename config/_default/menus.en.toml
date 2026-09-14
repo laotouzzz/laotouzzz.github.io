@@ -48,6 +48,13 @@
     pageRef = "software"
     weight = 20
 
+# ChatGPT 专题：挂在“专题”下拉菜单中，指向 content/chatgpt。
+    [[main]]
+    name = "ChatGPT"
+    parent = "专题"
+    pageRef = "chatgpt"
+    weight = 21
+
 [[main]]
     name = "折腾记录"
     pre = "code" # Blowfish 自带 SVG 图标：代码图标：技术折腾记录
@@ -74,7 +81,7 @@
     identifier = "GitHub"  # identifier用来防止name重名，识别不到
     name = " "
     pre = "github" # pre在菜单文字前面加一个小图标，图标名称来自Blowfish自带的图标库。显示GitHub的小标志。
-    url = "https://github.com/"
+    url = "https://github.com/laotouzzz/laotouzzz.github.io"
     weight = 40
 
 [[main]]
@@ -130,5 +137,3 @@
 #   name = "Categories"
 #   pageRef = "categories"
 #   weight = 20
-
-

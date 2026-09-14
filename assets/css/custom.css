@@ -1,0 +1,108 @@
+/* 首屏背景固定铺满视口；只模糊背景层，不影响正文与目录。 */
+body:has(.immersive-background) {
+  --immersive-header-space: 8rem; /* 当前 floating 导航栏的官方占位高度。 */
+}
+.immersive-background,
+.immersive-background-blur {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -10;
+}
+.immersive-background img,
+.immersive-background-blur img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.immersive-background-shade {
+  position: absolute;
+  inset: 0;
+  /* 少量暗色遮罩保留图片细节，同时让首屏白色文字清楚可读。 */
+  background: linear-gradient(180deg, rgb(0 0 0 / 12%), rgb(0 0 0 / 30%));
+}
+.immersive-background-blur {
+  opacity: 0; /* 官方脚本随滚动增加透明度，默认滚动 900px 达到完整效果。 */
+}
+.immersive-background-blur img {
+  filter: blur(16px);
+  transform: scale(1.07); /* 放大少量，避免模糊后屏幕边缘露出空白。 */
+}
+.immersive-reading-shade {
+  position: absolute;
+  inset: 0;
+  background: rgb(255 255 255 / 84%);
+}
+html.dark .immersive-reading-shade {
+  background: rgb(25 28 35 / 78%);
+}
+.immersive-intro {
+  position: relative;
+  box-sizing: border-box;
+  min-height: calc(100vh - var(--immersive-header-space));
+  min-height: calc(100svh - var(--immersive-header-space));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 0 5rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: white;
+  text-shadow: 0 2px 14px rgb(0 0 0 / 45%);
+}
+.immersive-home-intro { align-items: center; }
+.immersive-intro h1,
+.immersive-intro h2,
+.immersive-list-intro header h1,
+.immersive-list-intro header > div,
+.immersive-list-intro .prose,
+.immersive-list-intro .prose a,
+.immersive-intro .author,
+.immersive-intro .author a,
+.immersive-intro .author p,
+.immersive-intro #single_header,
+.immersive-intro > div,
+.immersive-intro a {
+  color: inherit;
+}
+.immersive-intro .icon { color: white; }
+.immersive-intro h1 { line-height: 1.2; }
+.immersive-intro img { text-shadow: none; }
+.immersive-article-intro { max-width: none; }
+.immersive-article-intro > h1 { max-width: 22ch; }
+.immersive-article-intro .author { max-width: 40rem; }
+.immersive-scroll-hint {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .4rem;
+  font-size: .875rem;
+  white-space: nowrap;
+}
+.immersive-scroll-hint .icon { width: 1rem; height: 1rem; }
+/* 内容位于首屏之后，随页面自然滚动；侧边目录继续使用官方布局。 */
+.immersive-home-content,
+.immersive-list-content,
+.immersive-article > section { padding-top: 3rem; }
+#home-articles,
+#list-articles,
+#article-body { scroll-margin-top: 7rem; } /* 点击下滑提示时避开固定导航栏。 */
+@media (max-width: 640px) {
+  .immersive-intro { padding-bottom: 4rem; }
+  .immersive-article-intro > h1 { font-size: 2rem; }
+}
+@media (prefers-reduced-transparency: reduce) {
+  .immersive-reading-shade { background: white; }
+  html.dark .immersive-reading-shade { background: rgb(25 28 35); }
+}
+@media print {
+  .immersive-background,
+  .immersive-background-blur,
+  .immersive-scroll-hint { display: none !important; }
+  .immersive-intro { min-height: 0; padding: 0; color: black; text-shadow: none; }
+}

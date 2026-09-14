@@ -1,0 +1,11 @@
+{{/* 使用官方自定义首页入口；个人简介和最近文章仍复用主题结构。 */}}
+{{ partial "immersive-background.html" . }}
+<div class="immersive-intro immersive-home-intro">
+  {{ partial "home/immersive-profile.html" . }}
+  <a class="immersive-scroll-hint" href="#home-articles" aria-label="向下查看文章">
+    {{ partial "icon.html" "chevron-down" }}<span>向下查看文章</span>
+  </a>
+</div>
+<section id="home-articles" class="immersive-home-content prose dark:prose-invert">
+  {{ .Content }}
+</section>
