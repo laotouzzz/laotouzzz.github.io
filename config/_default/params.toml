@@ -151,7 +151,7 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   showAuthor = true # 文章显示作者信息
   showAuthorBottom = false # 是否在文章底部显示作者简介卡片
 
-  showHero = false   # 文章顶部封面。
+  showHero = true   # 文章顶部封面。
   heroStyle = "thumbAndBackground" # 开启showHero后可选：basic（基础班）、big（宽大版）、background（全屏背景）、thumbAndBackground（缩略图+背景）。
 
   # 背景式 Hero 的模糊和顶部间距设置。
