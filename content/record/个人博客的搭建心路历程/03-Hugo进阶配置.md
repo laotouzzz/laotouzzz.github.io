@@ -108,7 +108,7 @@ jobs:
 
 打开 GitHub 仓库的 **Settings → Pages → Build and deployment**，将 **Source** 设置为 **GitHub Actions**。
 
-![GitHub Pages 发布来源设置](/record/个人博客的搭建心路历程/00-assets/20260815-201737.png)
+![GitHub Pages 发布来源设置](/record/01/00-assets/20260815-201737.png)
 
 推送到 `main` 后，到 **Actions → Build Hugo Site** 查看执行结果，也可以使用 **Run workflow** 手动触发。
 
@@ -151,7 +151,7 @@ draft: false
 
 不是每个文件夹都必须有 `_index.md`。顶层栏目可以由 Hugo 自动识别，纯图片目录也不需要这个文件。为了明确管理栏目名称和介绍，我会给需要展示的栏目添加 `_index.md`。参见 [Hugo 栏目文档](https://gohugo.io/content-management/sections/)。
 
-![栏目首页属性示例](/record/个人博客的搭建心路历程/00-assets/20260815-205814.png)
+![栏目首页属性示例](/record/01/00-assets/20260815-205814.png)
 
 `_index.md` 与 `index.md` 的用途不同：前者是栏目首页，后者常用于单篇文章的页面包，不要为了让文章显示而随意互换。
 
@@ -450,13 +450,13 @@ content/record/个人博客的搭建心路历程/00-assets/20260815-205814.png
 Obsidian 可能生成：
 
 ```markdown
-![](record/个人博客的搭建心路历程/00-assets/20260815-205814.png)
+![](/record/01/00-assets/20260815-205814.png)
 ```
 
 在本项目网页中，需要使用从网站根目录开始的路径：
 
 ```markdown
-![](/record/个人博客的搭建心路历程/00-assets/20260815-205814.png)
+![](/record/01/00-assets/20260815-205814.png)
 ```
 
 开头的 `/` 表示网站根路径，不是 Windows 磁盘路径。省略它时，浏览器可能把图片地址拼接到当前文章网址下，导致找不到图片；更换 `slug` 后，错误的相对路径也可能随之变化。
