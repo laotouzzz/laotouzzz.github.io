@@ -30,5 +30,5 @@ title: Custom Attachment Location
 >
 >无论上面嵌套多少层文件夹，也不妨碍文件迁移，直接将文件夹复制搬走即可
 
-因为我用`Hugo`写博客，必须要将路径修改为基于当前笔记的绝对路径，具体见[使用obsidian注意事项](record/个人博客的搭建心路历程/03-Hugo进阶配置.md#使用obsidian注意事项)
+因为我用`Hugo`写博客，必须要将路径修改为基于当前笔记的绝对路径，具体见[使用obsidian注意事项](record/01/03-Hugo进阶配置.md#使用obsidian注意事项)
 
