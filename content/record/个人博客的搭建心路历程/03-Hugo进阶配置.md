@@ -1,7 +1,7 @@
 ---
 title: 03-Hugo进阶配置
 date: 2026-08-15
-lastmod: 2026-09-14
+lastmod: 2026-09-15
 weight: "3"
 url: /record/01/03
 ---

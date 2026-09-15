@@ -1,6 +1,6 @@
 ---
 date: 2026-09-13
-lastmod: 2026-09-13
+lastmod: 2026-09-15
 title: 购买国外eSIM
 ---
 
@@ -15,7 +15,7 @@ https://hero-sms.com/cn
 https://smsflow.cc/
 
 ## 购买esim
-![](article/00-assets/20260913-134943.png)
+![](/article/00-assets/20260913-134943.png)
 
 esim.gg：[https://esim.gg/](https://esim.gg/)
 >QQ邮箱登录

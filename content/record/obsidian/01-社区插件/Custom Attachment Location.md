@@ -1,6 +1,6 @@
 ---
 date: 2026-08-08 18:40:30
-lastmod: 2026-08-28
+lastmod: 2026-09-15
 title: Custom Attachment Location
 ---
 
