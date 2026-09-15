@@ -1,10 +1,8 @@
 ---
-title: 2fa双重验证
+title: keepass保存TOTP验证
 date: 2026-08-26
-lastmod: 2026-08-28
+lastmod: 2026-09-15
 ---
-
-可以使用keepass软件来保存
 
 ## 具体步骤
 ### 选择一个你要导入的账户，比如Google等等
@@ -21,4 +19,4 @@ lastmod: 2026-08-28
 
 
 ### 在keepass中复制
-![](article/00-assets/20260826-160909.png)
+![](/article/00-assets/20260826-160909.png)

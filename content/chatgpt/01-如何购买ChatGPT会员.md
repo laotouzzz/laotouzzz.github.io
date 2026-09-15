@@ -1,9 +1,9 @@
 ---
 title: 01-如何购买ChatGPT会员
 date: 2026-07-20
-lastmod: 2026-09-14
+lastmod: 2026-09-15
 weight: "1"
-slug: "01"
+slug: "1"
 ---
 
 如何安全获取 GPT Plus 共享账号：真实经验和避坑建议

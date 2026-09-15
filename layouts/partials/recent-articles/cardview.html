@@ -1,0 +1,10 @@
+{{ $recentArticles := 5 }}
+{{ $recentArticles = .Site.Params.homepage.showRecentItems }}
+{{/* 首页“最近文章”只按发布日期倒序排列，不受各专题内部 weight 影响。 */}}
+{{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
+
+<section class="w-full grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+  {{ range first $recentArticles $pages.ByDate.Reverse }}
+    {{ partial "article-link/card.html" . }}
+  {{ end }}
+</section>

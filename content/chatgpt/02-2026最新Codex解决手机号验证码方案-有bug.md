@@ -1,10 +1,10 @@
 ---
 source: https://juejin.cn/post/7646723041637236751
 date: 2026-09-04
-lastmod: 2026-09-14
+lastmod: 2026-09-15
 title: 02-2026最新Codex解决手机号验证码方案-有bug
 weight: "2"
-slug: "02"
+slug: "2"
 ---
 
 bug：虽然可以登录进去但是用不了codex工作的能力，可以在插件[GitHub网址](https://github.com/zhishile/codex-auth-helper)的issues查看

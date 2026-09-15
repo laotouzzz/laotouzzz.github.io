@@ -37,7 +37,7 @@ replyByEmail = false # 文章末尾的邮件回复入口；需要配置作者邮
 
 # 首页最近文章来自哪些 content 子目录。
 # 例如文章在 content/article/，可以取消下面的注释：
-# mainSections = ["section1", "section2"]
+mainSections = ["article", "chatgpt", "record", "science-networking", "software"] # 首页最近文章从这些顶层栏目中选择。
 # robots = "" # robots 元数据，通常无需设置。
 
 

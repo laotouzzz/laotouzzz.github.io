@@ -1,10 +1,10 @@
 ---
 source: https://ncepuee.github.io/2026/05/24/Codex-Reconnecting-Fix-2026/
 date: 2026-09-13
-lastmod: 2026-09-14
+lastmod: 2026-09-15
 title: 03-Codex每次都要Reconnecting 5次？三个方案彻底解决
 weight: "3"
-slug: "03"
+slug: "3"
 ---
 
 ## 前言

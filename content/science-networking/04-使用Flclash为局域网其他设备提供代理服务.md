@@ -1,8 +1,8 @@
 ---
 title: 04-使用Flclash为局域网其他设备提供代理服务
 date: 2026-08-08
-lastmod: 2026-09-14
-slug: "04"
+lastmod: 2026-09-15
+slug: "4"
 weight: "4"
 ---
 
