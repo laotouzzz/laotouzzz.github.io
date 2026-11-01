@@ -32,41 +32,10 @@
 
 
 [[main]]
-    name = "专题"
-    pre = "list" # Blowfish 自带 SVG 图标：列表图标：专题导航
-    weight = 2
-
-    [[main]]
-    name = "科学上网"
-    parent = "专题" # parent指的是链接到父层级“类别”
-    pageRef = "science-networking"
-    weight = 19
-  
-    [[main]]
-    name = "软件推荐"
-    parent = "专题" 
-    pageRef = "software"
-    weight = 20
-
-# ChatGPT 专题：挂在“专题”下拉菜单中，指向 content/chatgpt。
-    [[main]]
-    name = "ChatGPT"
-    parent = "专题"
-    pageRef = "chatgpt"
-    weight = 21
-
-[[main]]
     name = "折腾记录"
     pre = "code" # Blowfish 自带 SVG 图标：代码图标：技术折腾记录
     weight = 3
     pageRef = "record"
-
-
-[[main]]
-    name = "种类"
-    pre = "tag" # Blowfish 自带 SVG 图标：标签图标：内容种类
-    weight = 4
-    pageRef = "article"
 
 [[main]]
     name = "文章"
