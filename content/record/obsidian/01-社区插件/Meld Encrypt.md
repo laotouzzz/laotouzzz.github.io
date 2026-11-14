@@ -9,11 +9,9 @@ lastmod: 2026-08-28
 [第三方使用教程](https://pkmer.cn/Pkmer-Docs/10-obsidian/obsidian%E7%A4%BE%E5%8C%BA%E6%8F%92%E4%BB%B6/readme/meld-encrypt_readme/)
 项目简介：Meld Encrypt 是一个社区插件，它允许你在 Obsidian 中对笔记进行加密和解密。你可以选择对整篇笔记进行加密，或者仅加密笔记中的选定文本。
 
-已翻译为中文
-	![](../00-assets/obsidian插件/obsidian-encrypt-main.7z)
 # Meld Encrypt 加密方案-20260630
 
-> Obsidian 插件 [meld-cp/obsidian-encrypt](https://github.com/meld-cp/obsi) v2.0 完整加密流程。
+> Obsidian 插件 [meld-cp/obsidian-encrypt](https://github.com/meld-cp/obsidian-encrypt) v2.0 完整加密流程。
 > 文件后缀 `.mdenc`，实际是 JSON。
 
 ## 加密流程

@@ -53,14 +53,6 @@
     url = "https://github.com/laotouzzz/laotouzzz.github.io"
     weight = 40
 
-[[main]]
-    identifier = "douyin" 
-    name = " "
-    pre = "tiktok"
-    weight = 40
-
-
-
 #[[main]]
 #  name = "Categories"
 #  pageRef = "categories"

@@ -20,8 +20,6 @@ buildFuture = false # 是否构建发布日期大于当前系统时间的未来�
 
 enableEmoji = true # 开启 emoji 短代码支持，内容里可以直接写 :smile: 这类表情语法渲染 emoji
 
-googleAnalytics = "G-XXXXXXXXX"
-
 [pagination]
   pagerSize = 100 # 控制列表每页展示多少篇文章
 

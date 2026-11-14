@@ -6,11 +6,8 @@
 
 ## 内容
 
-- **ChatGPT**：ChatGPT、Codex 的使用经验与相关记录。
-- **科学上网**：代理工具、网络测试与配置记录。
-- **软件推荐**：软件、网站、浏览器插件和开源项目。
-- **折腾记录**：个人博客搭建、Obsidian 和工具配置。
-- **文章**：其他学习笔记与日常分享。
+- **折腾记录**：Obsidian 使用教程、社区插件和工具配置。
+- **文章**：必要阅读与博客导航。
 
 ## 技术与布局
 
@@ -34,9 +31,6 @@
 ├── assets/                      # 背景、头像和自定义样式
 ├── config/_default/             # 站点、菜单、主题和 Markdown 配置
 ├── content/
-│   ├── chatgpt/                 # ChatGPT 专题
-│   ├── science-networking/      # 科学上网专题
-│   ├── software/                # 软件推荐专题
 │   ├── record/                  # 折腾记录
 │   └── article/                 # 其他文章
 ├── layouts/                     # 项目覆盖模板和自定义短代码
@@ -70,7 +64,7 @@ hugo --minify
 文章放在相应的 `content/` 子目录中，例如：
 
 ```text
-content/chatgpt/我的使用记录.md
+content/record/我的使用记录.md
 ```
 
 文章示例：
@@ -80,7 +74,7 @@ content/chatgpt/我的使用记录.md
 title: "我的使用记录"
 date: 2026-09-14
 draft: false
-tags: [ChatGPT]
+tags: [Obsidian]
 ---
 
 这里开始写正文。

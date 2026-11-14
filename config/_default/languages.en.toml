@@ -11,7 +11,7 @@ title = "LAOTOU"
   dateFormat = "2006-01-02" # 日期的格式，2006-01-02的格式只能这样写
   logo = "img/laotou-logo.png" # 网站主 logo、暗色模式下的 logo
   secondaryLogo = "img/laotou-logo.png"
-  description = "My awesome website" # 网站首页 meta 描述，搜索引擎会抓取，改成你自己站点简介
+  description = "LAOTOU 的个人博客，记录 Obsidian 使用、工具配置和日常发现。"
   #copyright = "Copy, _right?_ :thinking_face:" # 底部版权信息，取消注释自定义版权文案
 
 [params.author]
