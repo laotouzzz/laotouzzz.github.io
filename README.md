@@ -13,8 +13,8 @@
 
 | 项目 | 说明 |
 | --- | --- |
-| 静态网站生成器 | Hugo Extended，部署版本 `0.165.0` |
-| 主题 | Blowfish `3.7.0`，主题源码保存在 `themes/blowfish/` |
+| 静态网站生成器 | Hugo，部署版本 `0.170.1` |
+| 主题 | Blowfish `3.11.0`，通过 `themes/blowfish/` Git 子模块锁定官方发布版 |
 | 发布 | GitHub Actions 构建，GitHub Pages 托管 |
 | 写作 | Markdown，文章保存在 `content/` |
 | 外观 | 浮动导航、官方 SVG 图标、深浅色模式 |
@@ -35,14 +35,21 @@
 │   └── article/                 # 其他文章
 ├── layouts/                     # 项目覆盖模板和自定义短代码
 ├── static/                      # 直接复制到网站的静态文件
-└── themes/blowfish/             # 本地主题源码
+└── themes/blowfish/             # Blowfish Git 子模块
 ```
 
 ## 本地运行
 
-安装与部署版本一致的 **Hugo Extended 0.165.0**，在项目根目录执行：
+安装与部署版本一致的 [Hugo 0.170.1](https://github.com/gohugoio/hugo/releases/tag/v0.170.1)。新克隆时一并初始化主题。
 
 ```bash
+git clone --recurse-submodules https://github.com/laotouzzz/laotouzzz.github.io.git
+```
+
+在项目根目录同步主题并启动预览。拉取包含主题更新的提交后，也可以用同一条子模块命令切到仓库记录的版本。
+
+```bash
+git submodule update --init --recursive
 hugo version
 hugo server
 ```
@@ -57,7 +64,20 @@ hugo --minify
 
 构建结果保存在 `public/`。`public/`、`resources/` 和本地编辑器配置已加入 `.gitignore`。
 
-仓库内包含主题源码，普通博客预览和构建无需在线下载主题，也无需先执行 `npm install`；修改主题自身的前端源码时另按主题构建流程操作。
+主题初始化后，普通预览和构建直接使用子模块里的前端资源。
+
+## 更新 Blowfish 主题
+
+从 [官方发布列表](https://github.com/nunocoracao/blowfish/releases) 选择正式版本，把下面的 `vX.Y.Z` 替换为该版本的标签。
+
+```bash
+git -C themes/blowfish fetch --depth=1 origin tag vX.Y.Z
+git -C themes/blowfish checkout --detach vX.Y.Z
+hugo --minify
+hugo server
+```
+
+核对该版本支持的 Hugo 范围，必要时同步修改 `.github/workflows/hugo.yml` 里的 `hugo-version`。预览首页、文章和列表页，确认浮动导航和背景滚动效果后，把 `themes/blowfish` 的新指针与相关配置一起提交。站点自定义布局和样式在项目的 `layouts/` 与 `assets/css/` 中维护。
 
 ## 写文章与新增专题
 
@@ -109,7 +129,7 @@ immersiveBlurDistance = 900
 
 推送到 `main` 分支后，`.github/workflows/hugo.yml` 会自动：
 
-1. 获取代码并安装指定版本的 Hugo Extended。
+1. 检出站点与锁定的 Blowfish 子模块，再安装指定版本的 Hugo。
 2. 执行 `hugo --minify`。
 3. 上传 `public/` 并部署到 GitHub Pages。
 
